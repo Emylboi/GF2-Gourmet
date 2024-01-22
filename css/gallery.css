@@ -1,0 +1,96 @@
+.content-container {
+  /* Content Holder */
+  width: 100vw;
+  background-color: #000;
+  /* padding-bottom: 5vh; */
+}
+
+.gallery-content {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 50vh);
+  gap: 4vh;
+  justify-items: center;
+  background-color: #000;
+  padding: 0 0 15vh 0;
+}
+
+.galleryText {
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 0;
+  font-size: clamp(2rem, 1.296rem + 5.634vw, 4rem);
+}
+
+.gallery-content > div {
+  width: 90%;
+  grid-column: 1 / span 3;
+  background-color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  border: 0.1vw solid #eee;
+  border-radius: 50px;
+}
+
+.pic1 {
+  background-image: url(../img/photo-1474722883778-792e7990302f.avif);
+}
+.pic2 {
+  background-image: url(../img/klara-kulikova-lZm_VDhGGW8-unsplash.jpg);
+}
+.pic3 {
+  background-image: url(../img/casey-lee-awj7sRviVXo-unsplash.jpg);
+}
+.pic4 {
+  background-image: url(../img/katie-azi-FjCZRkE6yD0-unsplash.jpg);
+}
+.pic5 {
+  background-image: url(../img/juliette-f-fb0_wj2MZk4-unsplash.jpg);
+}
+.pic6 {
+  background-image: url(../img/charanjeet-dhiman-12xmsDaAO6I-unsplash.jpg);
+}
+.pic7 {
+  background-image: url(../img/photo-1548669329-4fb3791b79ca.avif);
+}
+.pic8 {
+  background-image: url(../img/jordane-mathieu-W1TOhhlbQpw-unsplash.jpg);
+}
+.pic9 {
+  background-image: url(../img/al-elmes-ULHxWq8reao-unsplash.jpg);
+}
+
+.gallery-content > div:nth-child(8) {
+  background-position-y: 90%;
+}
+
+@media screen and (min-width: 769px) {
+  .gallery-content {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 50vh);
+    margin: auto;
+  }
+
+  .gallery-content > div {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-content {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50vh);
+    gap: 3vh;
+    margin: auto;
+  }
+}

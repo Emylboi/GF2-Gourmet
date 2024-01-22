@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script
+      src="https://kit.fontawesome.com/d98c3039df.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    </style>
+  </head>
+  <body>
+    <div class="navBar">
+      <!-- FOR MOBILE. MAKE LIST -->
+      <button class="navMenu-btn" id="nav-Menu-btn">
+        <i class="fa-solid fa-chevron-down navMenu-arrow"></i>
+      </button>
+      <ul class="navList" id="nav-List">
+        <li class="navHome">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navMenu">
+          <a href="menu.html">Menu</a>
+        </li>
+        <li class="navGallery">
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li class="navContact">
+          <a href="contact.html" class="activePage">Contact</a>
+        </li>
+      </ul>
+      <!-- FOR WEB -->
+      <div class="navBar-containerWeb">
+        <a href="index.html" class="navWeb-btn"
+          ><div class="navLogo">Home</div></a
+        >
+        <a href="menu.html" class="navWeb-btn"
+          ><div class="navGourmet">Menu</div></a
+        >
+        <a href="gallery.html" class="navWeb-btn"
+          ><div class="navGallery">Gallery</div></a
+        >
+        <a href="contact.html" class="navWeb-btn activePage"
+          ><div class="navContact">Contact</div></a
+        >
+      </div>
+    </div>
+
+    
+    <div class="content-container">
+      <div class="content-container-grid">
+        <div class="newsletter-container" id="newsletter-container">
+          <h2 class="newsletter-Title">Subscribe to our newsletter!</h2>
+          <form action="#" class="newsletter-form">
+            <input type="email" name="email" id="email" placeholder="E-mail" class="newsletter-Input input">
+            <button class="newsletter-subscribe button">Subscribe</button>
+          </form>
+        </div>
+        <div class="contact-container">
+          <h2 class="contact-Title">Want to contact us or book a table? Leave us a message down below or on phone number 12 34 56 78</h2>
+          <form action="" class="contact-form"">
+            <input type="email" name="email" id="email" placeholder="E-mail" class="contact-Input input">
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="contact-Input input">
+            <input type="text" name="name" id="name" placeholder="Name" class="contact-Input input">
+            <textarea name="message" id="message" placeholder="What can we help you with?" class="contact-Message"></textarea>
+            <button class="contact-Send button">Send</button>
+          </form>
+        </div>
+        <div class="maps-container">
+          <h2 class="maps-Title">Where to find us?</h2>
+          <h3 class="contact-Info">Skaldehøjvej 2 <br> 8800, Viborg <br>12 34 56 78</h3>
+          <div class="maps">
+            <img src="img/googleMaps.png">
+          </div>
+        </div>
+        <div class="picture-container">
+          <div class="contact-pic"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <footer class="footing"></footer>
+
+    <script>
+      const menuButton = document.querySelector("#nav-Menu-btn");
+      const navList = document.querySelector("#nav-List");
+
+      menuButton.addEventListener("click", () => {
+        navList.classList.toggle("show");
+        menuButton.classList.toggle("active");
+      });
+
+      navList.addEventListener("click", () => {
+        navList.classList.remove("show");
+        menuButton.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

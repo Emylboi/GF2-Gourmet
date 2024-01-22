@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <script
+      src="https://kit.fontawesome.com/d98c3039df.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="navBar">
+      <!-- FOR MOBILE. MAKE LIST -->
+      <button class="navMenu-btn" id="nav-Menu-btn">
+        <i class="fa-solid fa-chevron-down navMenu-arrow"></i>
+      </button>
+      <ul class="navList" id="nav-List">
+        <li class="navHome">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navMenu">
+          <a href="menu.html" class="activePage">Menu</a>
+        </li>
+        <li class="navGallery">
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li class="navContact">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <!-- FOR WEB -->
+      <div class="navBar-containerWeb">
+        <a href="index.html" class="navWeb-btn"
+          ><div class="navLogo">Home</div></a
+        >
+        <a href="menu.html" class="navWeb-btn activePage"
+          ><div class="navGourmet">Menu</div></a
+        >
+        <a href="gallery.html" class="navWeb-btn"
+          ><div class="navGallery">Gallery</div></a
+        >
+        <a href="contact.html" class="navWeb-btn"
+          ><div class="navContact">Contact</div></a
+        >
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="menu-container">
+        <img src="img/menu.jpg" />
+      </div>
+    </div>
+
+    <footer class="footing"></footer>
+
+    <script>
+      const menuButton = document.querySelector("#nav-Menu-btn");
+      const navList = document.querySelector("#nav-List");
+
+      menuButton.addEventListener("click", () => {
+        navList.classList.toggle("show");
+        menuButton.classList.toggle("active");
+      });
+
+      navList.addEventListener("click", () => {
+        navList.classList.remove("show");
+        menuButton.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

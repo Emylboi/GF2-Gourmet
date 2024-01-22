@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/d98c3039df.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- NAV BAR -->
+    <div class="navBar">
+      <!-- FOR MOBILE. MAKE LIST -->
+      <button class="navMenu-btn" id="nav-Menu-btn">
+        <i class="fa-solid fa-chevron-down navMenu-arrow"></i>
+      </button>
+      <ul class="navList" id="nav-List">
+        <li class="navHome">
+          <a href="index.html" class="activePage">Home</a>
+        </li>
+        <li class="navMenu">
+          <a href="menu.html">Menu</a>
+        </li>
+        <li class="navGallery">
+          <a href="gallery.html">Gallery</a>
+        </li>
+        <li class="navContact">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <!-- FOR WEB -->
+      <div class="navBar-containerWeb">
+        <a href="index.html" class="navWeb-btn activePage"
+          ><div class="navLogo">Home</div></a
+        >
+        <a href="menu.html" class="navWeb-btn"
+          ><div class="navGourmet">Menu</div></a
+        >
+        <a href="gallery.html" class="navWeb-btn"
+          ><div class="navGallery">Gallery</div></a
+        >
+        <a href="contact.html" class="navWeb-btn"
+          ><div class="navContact">Contact</div></a
+        >
+      </div>
+    </div>
+
+    <div class="content-container">
+      <h1 class="index-welcomeMsg">Le goût infini</h1>
+      <p class="index-infoMsg">
+        Welcome to the epicurean haven that is Le goût infini, a culinary
+        sanctuary where the world's finest chefs converge to unveil their
+        gastronomic creations. Nestled in the heart of Viborg, our restaurant is
+        a symphony of flavors and artistry, where each dish is a masterpiece,
+        and every meal a journey of delight. <br /><br />
+        <b style="font-size: 120%"><u>Our Vision</u></b>
+        <br />
+        At Le goût infini, we aspire to redefine the dining experience. We are
+        more than a restaurant; we are a gastronomic rendezvous that celebrates
+        the art of food, where passion and innovation collide to create
+        unforgettable memories. We believe that food transcends sustenance; it
+        is an expression of culture, tradition, and craftsmanship.
+        <br /><br />
+        <b style="font-size: 120%"><u>The Chef Collective</u></b>
+        <br />
+        Our restaurant is a canvas for culinary visionaries, a stage for the
+        world's foremost chefs to display their talent. We curate a rotating
+        lineup of esteemed chefs, each with their unique styles, influences, and
+        philosophies. From Michelin-starred icons to emerging culinary stars,
+        our guest chefs hail from the far corners of the globe. They bring with
+        them a kaleidoscope of flavors and techniques, ensuring that every visit
+        to Le goût infini is a one-of-a-kind journey through global culinary
+        artistry.
+        <br /><br />
+        <b style="font-size: 120%"><u>The Dining Experience</u></b>
+        <br />
+        The dining experience at Le goût infini is a harmonious blend of
+        ambiance, service, and, of course, the exquisite cuisine. Our
+        thoughtfully designed space evokes an ambiance of refined elegance,
+        perfect for intimate gatherings, celebrations, and special occasions.
+        Our attentive and knowledgeable staff will guide you through the
+        culinary odyssey, making your dining experience seamless and memorable.
+      </p>
+
+      <div class="indexPics">
+        <div class="indexPic1"></div>
+        <div class="indexPic2"></div>
+        <div class="indexPic3"></div>
+      </div>
+
+      <a href="contact.html#newsletter-container" class="indexToContact"
+        ><h1>
+          Subscribe to our newsletter. <br />
+          Get our best deals!
+        </h1></a
+      >
+    </div>
+
+    <footer class="footing"></footer>
+
+    <script>
+      const menuButton = document.querySelector("#nav-Menu-btn");
+      const navList = document.querySelector("#nav-List");
+
+      menuButton.addEventListener("click", () => {
+        navList.classList.toggle("show");
+        menuButton.classList.toggle("active");
+      });
+
+      navList.addEventListener("click", () => {
+        navList.classList.remove("show");
+        menuButton.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

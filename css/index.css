@@ -1,0 +1,117 @@
+/*  */
+/* Index Content */
+/*  */
+
+.content-container { /* Content Holder */
+  width: 100vw;
+  background-image: url(../img/steak-pic.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 5vh;
+  font-family: 'Lato', sans-serif;
+}
+
+body{ 
+  background-color: #000;
+}
+.index-welcomeMsg { /*h1 Welcome Message */
+  width: 85%;
+  margin: auto;
+  padding: 2vh 0;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  font-size: clamp(2rem, 1.296rem + 5.634vw, 4rem);
+}
+
+.index-infoMsg { /* paragraph info message */
+  width: 85%;
+  margin: auto;
+  padding: 2vh;
+  text-align: center;
+  background-color: rgba(100, 13, 20, 0.5);
+  color: white;
+  border-radius: 25px;
+  font-size: clamp(1rem, 0.824rem + 1.408vw, 1.5rem);
+  line-height: 1.5;
+  
+}
+
+.indexPics { /* Pictures only visible in web version */
+  display: none;
+}
+
+.indexToContact{
+  width: 85%;
+  height: auto;
+  margin: auto;
+  border-radius: 25px;;
+  color: #eee;
+  place-content: center;
+  background-color: rgba(100, 13, 20, 0.5);
+  font-size: clamp(0.5rem, 0.213rem + 1.639vw, 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+  padding: 5vw;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/*  */
+/* WEB MEDIA QUERY */
+/*  */
+
+@media screen and (min-width: 500px) { /* Only exists to make the background fit in smallest mobile views */
+  .content-container {
+    background-position-y: -20vh;
+  }
+}
+
+@media screen and (min-width: 769px) { /* WEB VIEW */
+  .content-container { /* Background fit */
+    background-position-y: 60%;
+    padding-top: 3vh;
+  }
+
+  .index-infoMsg{ /* paragraph info text */
+    font-size: clamp(1rem, 0.332rem + 1.39vw, 2rem);
+    padding: 2%;
+  }
+
+  .indexPics { /* Frontpage picture holder*/
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5vh;
+  }
+
+  .indexPics > div { /* Frontpage pictures */
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .indexPic1 {
+    background-image: url(../img/adrien-olichon-XB1W7TlTaxQ-unsplash.jpg);
+    background-position-y: 50%;
+  }
+  .indexPic2 {
+    background-image: url(../img/juan-encalada-_zi5JfDgHww-unsplash.jpg);
+    background-position-x: 20%;
+  }
+  .indexPic3 {
+    background-image: url(../img/redcharlie-redcharlie1-t-7KEq9M0b0-unsplash.jpg);
+    background-position-y: 30%;
+  }
+
+  .indexToContact{
+    font-size: clamp(1rem, 0.332rem + 1.39vw, 2rem);
+  }
+
+  .indexToContact:hover{
+    background-color: rgba(100, 13, 20, 0.8);
+  }
+}
